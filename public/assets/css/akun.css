@@ -1,0 +1,17 @@
+/* ===== Login & daftar ===== */
+.halaman-akun { min-height: 100vh; background: linear-gradient(120deg, rgba(244, 247, 251, .94), rgba(255, 255, 255, .72)), url('../img/foto/hero-gedung.jpg') center / cover no-repeat; }
+.akun { min-height: 100vh; display: grid; place-items: center; padding: 1.5rem; }
+.akun__kartu { width: min(420px, 100%); background: rgba(255, 255, 255, .94); border-radius: 20px; padding: 2.2rem 2rem; box-shadow: 0 24px 60px rgba(11, 27, 53, .15); text-align: center; }
+.akun__logo { display: flex; justify-content: center; margin-bottom: 1.2rem; }
+.akun__kartu h1 { font-size: 1.5rem; margin-bottom: .2rem; }
+.akun__sub { color: var(--redup); font-size: .9rem; margin-bottom: 1.5rem; }
+.form { text-align: left; display: grid; gap: 1rem; }
+.field { position: relative; }
+.field input { width: 100%; padding: .85rem 1rem; border: 1px solid var(--garis); border-radius: 10px; background: #fff; font-size: .9rem; }
+.field input:focus { outline: none; border-color: var(--biru); box-shadow: 0 0 0 3px rgba(27, 82, 153, .12); }
+.field--sandi input { padding-right: 2.8rem; }
+.mata { position: absolute; right: .6rem; top: .55rem; background: none; border: 0; color: var(--redup); cursor: pointer; padding: .2rem; }
+.form__baris { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; }
+.cek { display: inline-flex; align-items: center; gap: .45rem; color: var(--redup); cursor: pointer; }
+.akun__bawah { margin: 1.3rem 0 0; font-size: .85rem; color: var(--redup); }
+.akun__petunjuk { margin: 1rem 0 0; font-size: .72rem; color: var(--redup); background: var(--latar); padding: .6rem .8rem; border-radius: 10px; }

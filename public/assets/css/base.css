@@ -1,0 +1,77 @@
+/* ===== MagangKu — dasar: token, reset, komponen bersama ===== */
+:root {
+    --navy: #0b1b35;
+    --navy-2: #13294b;
+    --biru: #1b5299;
+    --kabut: #c8d2df;
+    --latar: #f4f7fb;
+    --putih: #ffffff;
+    --teal: #1f8f82;
+    --teks: #1b2740;
+    --redup: #6b778c;
+    --garis: #e3e9f2;
+    --radius: 14px;
+    --bayangan: 0 10px 30px rgba(11, 27, 53, .08);
+    --font-judul: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-isi: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-isi); color: var(--teks); background: var(--putih); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--font-judul); color: var(--navy); line-height: 1.2; margin: 0 0 .5em; }
+p { margin: 0 0 1em; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+.ikon { flex: none; vertical-align: middle; }
+.wadah { width: min(1120px, 100% - 40px); margin-inline: auto; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid rgba(27, 82, 153, .45); outline-offset: 2px; }
+
+/* Tombol */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .75rem 1.4rem; border-radius: 999px; border: 1.5px solid transparent; font-weight: 700; font-size: .95rem; cursor: pointer; transition: transform .15s, box-shadow .15s, background .15s; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--navy); color: #fff; }
+.btn-primary:hover { background: var(--navy-2); box-shadow: 0 8px 20px rgba(11, 27, 53, .25); }
+.btn-outline { background: #fff; border-color: var(--garis); color: var(--navy); }
+.btn-outline:hover { border-color: var(--kabut); box-shadow: var(--bayangan); }
+.btn-sm { padding: .55rem 1.1rem; font-size: .85rem; }
+.btn-xs { padding: .3rem .9rem; font-size: .75rem; margin-top: .4rem; }
+.btn-block { width: 100%; }
+
+/* Lencana status */
+.badge { display: inline-block; padding: .2rem .7rem; border-radius: 999px; font-size: .72rem; font-weight: 700; white-space: nowrap; }
+.badge--hijau { background: #dff5ea; color: #1d7a4d; }
+.badge--kuning { background: #fdf0cf; color: #9a6a00; }
+.badge--merah { background: #fde0e0; color: #b93232; }
+.badge--biru { background: #dfeaf9; color: var(--biru); }
+
+/* Umum */
+.tautan { color: var(--biru); font-weight: 700; }
+.tautan:hover { text-decoration: underline; }
+.tautan--merah { color: #c0392b; }
+.ikon-tombol { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: #fff; border: 1px solid var(--garis); color: var(--navy); cursor: pointer; position: relative; }
+.ikon-kotak { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; flex: none; }
+.ikon-kotak--kecil { width: 32px; height: 32px; border-radius: 9px; }
+.ikon-kotak--biru { background: #e3ecfa; color: var(--biru); }
+.ikon-kotak--hijau { background: #dcf3ee; color: var(--teal); }
+.ikon-kotak--abu { background: #e9edf3; color: var(--navy); }
+.peringatan { padding: .8rem 1rem; border-radius: 12px; margin-bottom: 1rem; font-size: .9rem; }
+.peringatan--sukses { background: #dff5ea; color: #1d7a4d; }
+.galat { display: block; color: #c0392b; font-size: .78rem; margin-top: .3rem; }
+
+/* Logo */
+.logo { display: inline-flex; align-items: center; gap: .55rem; color: var(--navy); }
+.logo__mark { width: 34px; height: 24px; color: var(--biru); }
+.logo__teks { font-family: var(--font-judul); font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; }
+.logo--terang, .logo--terang .logo__mark { color: #fff; }
+
+/* Tabel */
+.tabel-bungkus { overflow-x: auto; }
+.tabel { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.tabel th { text-align: left; font-family: var(--font-judul); font-size: .8rem; color: var(--navy); padding: .8rem 1rem; border-bottom: 1px solid var(--garis); }
+.tabel td { padding: .9rem 1rem; border-bottom: 1px solid var(--garis); color: var(--teks); }
+.tabel tr:last-child td { border-bottom: 0; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
